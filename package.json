@@ -1,0 +1,12 @@
+{
+  "name": "cleansimur-wellness",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve . -l 3000",
+    "build": "node -e \"console.log('Static site ready')\""
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
