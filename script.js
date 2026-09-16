@@ -14,6 +14,7 @@ const sizeField = document.querySelector('input[name="size"]');
 function validateField(field) {
     const value = field.value.trim();
     const fieldContainer = field.closest('.field') || field.parentElement;
+    const errorMessage = fieldContainer?.querySelector('.error-message');
 
     if (!fieldContainer) return true;
 
@@ -34,8 +35,20 @@ function validateField(field) {
         isValid = false;
     }
 
+    if (errorMessage) {
+        if (!value && field.hasAttribute('required')) {
+            errorMessage.textContent = 'This field is required.';
+        } else if (field.type === 'email' && value && !isValidEmail(value)) {
+            errorMessage.textContent = 'Enter a valid email address.';
+        } else if (field.type === 'tel' && value && !/^\d{7,}/.test(value.replace(/\D/g, ''))) {
+            errorMessage.textContent = 'Enter at least 7 digits.';
+        } else {
+            errorMessage.textContent = '';
+        }
+    }
+
     // Update field styling
-    if (isValid && value) {
+    if (isValid) {
         fieldContainer.classList.remove('error');
     } else if (!isValid) {
         fieldContainer.classList.add('error');
@@ -90,7 +103,7 @@ if (form) {
         const size = new FormData(form).get('size');
         const name = nameField.value.trim();
 
-        message.textContent = `Thank you, ${name}! Your ${size} enquiry has been submitted successfully. An authorized Cleansimur representative will contact you soon.`;
+        message.textContent = `Thank you, ${name}! Your ${size} enquiry details are ready. An authorised Cleansimur representative will contact you soon.`;
         message.className = 'form-message success';
 
         // Optional: Clear form after successful submission
