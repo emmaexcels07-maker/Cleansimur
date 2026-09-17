@@ -10,6 +10,17 @@ const phoneField = document.querySelector('#phone');
 const emailField = document.querySelector('#email');
 const sizeField = document.querySelector('input[name="size"]');
 
+// Start the hero video explicitly when autoplay is permitted.
+const heroVideo = document.querySelector('.hero-media video');
+if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.addEventListener('loadedmetadata', () => {
+        heroVideo.play().catch(() => {
+            // Browsers may still require user interaction before playback.
+        });
+    }, { once: true });
+}
+
 // Validate individual fields
 function validateField(field) {
     const value = field.value.trim();
@@ -188,6 +199,8 @@ document.querySelectorAll('.button').forEach(button => {
         setTimeout(() => ripple.remove(), 600);
     });
 });
+
+
 
 // ========================================
 // PAGE LOAD ANIMATION
