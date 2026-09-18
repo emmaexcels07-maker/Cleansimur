@@ -2,218 +2,160 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cleansimur health drink - a heritage-led herbal wellness drink for Nigeria." />
-  <meta name="theme-color" content="#0b4931" />
-  <title>Cleansimur | Premium Health Drink</title>
-  <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Meta Pixel Code -->
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    
-    const PIXEL_ID = '123456789012345';
-    fbq('init', 'YOUR_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" />
-  </noscript>
-  <!-- End Meta Pixel Code -->
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover Cleansimur, a premium herbal wellness drink made for your everyday ritual." />
+    <meta name="theme-color" content="#123d31" />
+    <title>Cleansimur | Your daily wellness ritual</title>
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="topbar" role="banner">
-    <div class="topbar-container">
-      <a class="brand" href="#top" aria-label="Cleansimur home">
-        <strong>Cleansimur</strong>
-        <span>Health drink · Nigerian identity</span>
-      </a>
-      <nav class="actions" aria-label="Primary navigation">
-        <a class="button secondary" href="#products">View products</a>
-        <a class="button primary" href="#enquire">Make an enquiry</a>
-      </nav>
-    </div>
-  </header>
-  <main id="top">
-    <section class="hero" role="region" aria-label="Welcome to Cleansimur">
-      <div class="hero-media">
-        <video controls autoplay muted playsinline preload="metadata" poster="public/hero.jpg"
-          aria-label="Cleansimur health drink video">
-          <source src="public/WhatsApp Video 2026-09-16 at 10.05.58 AM.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="hero-copy">
-        <p class="eyebrow">Heritage-led · Herbal wellness</p>
-        <h1>Good health.<br /><em>Great life.</em></h1>
-        <p class="hero-description">Cleansimur is a natural health drink inspired by traditional herbal wisdom and
-          thoughtfully made for everyday wellness in Nigeria.</p>
-        <div class="hero-buttons">
-          <a class="button primary" href="#products">Explore Cleansimur</a>
-          <a class="button dark" href="#heritage">Our story</a>
+    <header class="topbar">
+        <div class="topbar-container">
+            <a class="brand" href="#top" aria-label="Cleansimur home">
+                <strong>Cleansimur</strong>
+                <span>Premium herbal wellness</span>
+            </a>
+            <a class="button button-small" href="#offer">Place Order</a>
         </div>
-        <div class="trust-row">
-          <span>✓ Natural ingredients</span>
-          <span>✓ Quality-led</span>
-          <span>✓ Trusted heritage</span>
-        </div>
-      </div>
-    </section>
-    <section id="heritage" class="heritage-section" role="region" aria-label="Our Heritage">
-      <div class="section-inner split">
-        <div class="heritage-content">
-          <p class="eyebrow">The Cleansimur story</p>
-          <h2>A familiar heritage.<br />A <em>protected</em> identity.</h2>
-          <p>Cleansimur continues the legacy, standards and care associated with Jigsimur, under a name created to help
-            protect authenticity in Nigeria.</p>
-          <ul class="feature-list">
-            <li>Traditional herbal heritage</li>
-            <li>Thoughtful daily wellness</li>
-            <li>Natural ingredient focus</li>
-            <li>Made for modern lifestyles</li>
-          </ul>
-        </div>
-        <img class="product-image" src="public/heritage.jpg" alt="Cleansimur heritage presentation" loading="lazy" />
-      </div>
-    </section>
-    <section class="green-band" role="region" aria-label="Wellness Benefits">
-      <div class="section-inner">
-        <p class="eyebrow">Made for your everyday rhythm</p>
-        <h2>Wellness, in a simple daily ritual.</h2>
-        <p class="band-intro">Cleansimur is designed to complement a balanced lifestyle with a carefully selected herbal
-          blend.</p>
-        <ul class="wellness-grid">
-          <li><span class="check">✓</span>Natural herbal blend</li>
-          <li><span class="check">✓</span>Everyday vitality</li>
-          <li><span class="check">✓</span>Digestive wellbeing</li>
-          <li><span class="check">✓</span>Immune support</li>
-          <li><span class="check">✓</span>Quality you can trust</li>
-          <li><span class="check">✓</span>Wellness across generations</li>
-        </ul>
-      </div>
-    </section>
-    <section class="gallery-section" role="region" aria-label="Product Gallery">
-      <div class="section-inner">
-        <p class="eyebrow">The Cleansimur range</p>
-        <h2>Rooted in tradition.<br /><em>Ready for today.</em></h2>
-        <div class="gallery">
-          <img src="public/hero.jpg" alt="Cleansimur health drink presentation" loading="lazy" />
-          <img src="public/heritage.jpg" alt="Cleansimur bottle and heritage story" loading="lazy" />
-          <img src="public/plans.jpg" alt="Cleansimur opportunity overview" loading="lazy" />
-        </div>
-      </div>
-    </section>
-    <section id="products" class="products-section" role="region" aria-label="Product Pricing">
-      <div class="section-inner products-layout">
-        <div>
-          <p class="eyebrow">Available sizes</p>
-          <h2>Choose the Cleansimur size that works for you.</h2>
-          <p>Ask an authorised distributor for current availability and ordering support.</p>
-        </div>
-        <div class="product-cards">
-          <article class="product-card">
-            <span class="product-size">250 ml</span>
-            <strong class="product-price">₦7,000</strong>
-            <small>Retail price</small>
-          </article>
-          <article class="product-card featured">
-            <span class="badge">Popular</span>
-            <span class="product-size">375 ml</span>
-            <strong class="product-price">₦10,500</strong>
-            <small>Retail price</small>
-          </article>
-          <article class="product-card">
-            <span class="product-size">750 ml</span>
-            <strong class="product-price">₦20,000</strong>
-            <small>Retail price</small>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section id="enquire" class="enquiry-section" role="region" aria-label="Contact Us">
-      <div class="section-inner enquiry-layout">
-        <div>
-          <p class="eyebrow">Enquire today</p>
-          <h2>Find your authorised <em>distributor.</em></h2>
-          <p>Tell us how you would like to connect, and we will prepare your enquiry for an authorised Cleansimur
-            representative.</p>
-          <a class="button primary whatsapp-link"
-            href="https://chat.whatsapp.com/KV3B0wZs3dgAzqoWZC3GuV?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank"
-            rel="noopener noreferrer">Join our WhatsApp community</a>
-          <p class="note">This form is a website preview. Connect an approved Cleansimur order channel before publishing
-            it for customer orders.</p>
-        </div>
-        <form class="enquiry-form" id="enquiry-form" novalidate>
-          <div class="form-group">
-            <div class="field">
-              <label for="name">Name <span aria-label="required">*</span></label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
-              <span class="error-message"></span>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">A better daily ritual</p>
+                <h1>Feel good.<br /><em>Live fully.</em></h1>
+                <p class="hero-description">Meet Cleansimur, a premium herbal wellness drink inspired by trusted
+                    Nigerian heritage and made for the rhythm of modern life.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#offer">Place Order</a>
+                    <a class="text-link" href="#why-cleansimur">Why Cleansimur <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="proof-row" aria-label="Product highlights">
+                    <span><b>01</b> Herbal blend</span>
+                    <span><b>02</b> Everyday wellness</span>
+                    <span><b>03</b> Made with care</span>
+                </div>
             </div>
-            <div class="field">
-              <label for="phone">Phone number <span aria-label="required">*</span></label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-              <span class="error-message"></span>
+            <div class="hero-product">
+                <div class="product-orbit"></div>
+                <img src="public/hero.jpeg" alt="Cleansimur premium herbal wellness drink" />
+                <span class="hero-label">The original<br /><b>Cleansimur ritual</b></span>
             </div>
-          </div>
-          <div class="field">
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" autocomplete="email" />
-            <span class="error-message"></span>
-          </div>
-          <fieldset class="size-fieldset">
-            <legend>Preferred product size <span aria-label="required">*</span></legend>
-            <div class="sizes">
-              <label class="radio-label">
-                <input type="radio" name="size" value="250 ml" required />
-                <span>250 ml</span>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="size" value="375 ml" />
-                <span>375 ml</span>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="size" value="750 ml" />
-                <span>750 ml</span>
-              </label>
+        </section>
+
+        <section class="video-section" aria-labelledby="video-title">
+            <div class="section-heading centered">
+                <p class="eyebrow">See it for yourself</p>
+                <h2 id="video-title">A simple ritual.<br /><em>A difference you can feel.</em></h2>
             </div>
-          </fieldset>
-          <button class="button primary" type="submit">Prepare enquiry</button>
-          <p class="form-message" aria-live="polite" role="status"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer role="contentinfo">
-    <a class="brand" href="#top">
-      <strong>Cleansimur</strong>
-      <span>Health drink</span>
-    </a>
-    <p>Good health. <b>More wealth.</b> Great life.</p>
-    <small>Product information is for general wellness only and is not medical advice. Always consult a qualified health
-      professional for medical concerns.</small>
-  </footer>
-  <script src="script.js" defer></script>
+            <div class="video-frame">
+                <video controls muted playsinline preload="metadata" poster="public/hero.jpeg"
+                    aria-label="Cleansimur product video">
+                    <source src="public/WhatsApp Video 2026-09-16 at 10.05.58 AM.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="video-caption">Rooted in herbal wisdom. Designed for the way you live today.</p>
+        </section>
+
+        <section id="why-cleansimur" class="why-section">
+            <div class="why-image"><img src="public/heritage.jpg"
+                    alt="Cleansimur bottle presented with its heritage story" loading="lazy" /></div>
+            <div class="why-copy">
+                <p class="eyebrow">More than a drink</p>
+                <h2>Make wellness part of your <em>everyday.</em></h2>
+                <p>Cleansimur brings a carefully considered herbal blend into one easy, enjoyable daily habit. It is
+                    made for people who want to care for themselves without slowing down.</p>
+                <div class="benefit-list">
+                    <div><span>✓</span><strong>Heritage you can trust</strong>
+                        <p>Inspired by a familiar tradition and made for a new generation.</p>
+                    </div>
+                    <div><span>✓</span><strong>Simple daily wellness</strong>
+                        <p>One refreshing bottle that fits naturally into your routine.</p>
+                    </div>
+                    <div><span>✓</span><strong>Premium presentation</strong>
+                        <p>Thoughtfully made, beautifully packaged, and ready to share.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offer" class="offer-section" aria-labelledby="offer-title">
+            <div class="offer-intro">
+                <p class="eyebrow">Your next bottle is here</p>
+                <h2 id="offer-title">Start with the<br /><em>750 ml experience.</em></h2>
+                <p>Enough for a meaningful daily ritual, beautifully made for your home, your family, or someone you
+                    care about.</p>
+            </div>
+            <div class="purchase-panel">
+                <article class="offer-card">
+                    <div class="offer-card-top">
+                        <span class="offer-badge">Best value</span>
+                        <span class="offer-size">750 ml bottle</span>
+                    </div>
+                    <div class="offer-price"><span>₦</span>20,000 <small>per bottle</small></div>
+                    <p class="offer-detail">Bundle savings are available when you order more than one bottle. Ask us for
+                        your best offer.</p>
+                </article>
+                <form class="order-form" id="order-form">
+                    <div class="form-heading">
+                        <h3>Place your order</h3>
+                        <p>Share your details and we will confirm delivery and your multi-bottle discount.</p>
+                    </div>
+                    <label for="customer-name">Full name</label>
+                    <input id="customer-name" name="name" type="text" autocomplete="name" placeholder="Your name"
+                        required />
+                    <label for="customer-phone">Phone number</label>
+                    <input id="customer-phone" name="phone" type="tel" autocomplete="tel" placeholder="0800 000 0000"
+                        required />
+                    <div class="form-row">
+                        <div>
+                            <label for="order-quantity">Quantity</label>
+                            <select id="order-quantity" name="quantity">
+                                <option value="1">1 bottle</option>
+                                <option value="2">2 bottles</option>
+                                <option value="3">3 bottles</option>
+                                <option value="4+">4+ bottles</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="delivery-location">Delivery city</label>
+                            <input id="delivery-location" name="location" type="text" placeholder="Lagos" required />
+                        </div>
+                    </div>
+                    <button class="button button-gold" type="submit">Continue on WhatsApp <span
+                            aria-hidden="true">↗</span></button>
+                    <p class="form-message" id="order-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div>
+                <p class="eyebrow">Your wellness, made personal</p>
+                <h2>Ready to make the<br /><em>switch?</em></h2>
+            </div>
+            <a class="button button-primary"
+                href="https://chat.whatsapp.com/KV3B0wZs3dgAzqoWZC3GuV?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank"
+                rel="noopener noreferrer">Talk to us on WhatsApp <span aria-hidden="true">↗</span></a>
+        </section>
+    </main>
+
+    <footer>
+        <a class="brand" href="#top"><strong>Cleansimur</strong><span>Premium herbal wellness</span></a>
+        <p>Good health. <b>More life.</b></p>
+        <small>Product information is for general wellness purposes only and is not medical advice.</small>
+    </footer>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

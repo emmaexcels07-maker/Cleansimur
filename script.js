@@ -1,131 +1,29 @@
 // ========================================
-// FORM HANDLING & VALIDATION
+// ORDER FORM
 // ========================================
-const form = document.querySelector('#enquiry-form');
-const message = document.querySelector('.form-message');
+const orderForm = document.querySelector('#order-form');
+const orderMessage = document.querySelector('#order-message');
+const whatsappUrl = 'https://chat.whatsapp.com/KV3B0wZs3dgAzqoWZC3GuV?s=cl&p=a&mlu=4&ilr=4';
 
-// Form field elements
-const nameField = document.querySelector('#name');
-const phoneField = document.querySelector('#phone');
-const emailField = document.querySelector('#email');
-const sizeField = document.querySelector('input[name="size"]');
-
-// Start the hero video explicitly when autoplay is permitted.
-const heroVideo = document.querySelector('.hero-media video');
-if (heroVideo) {
-    heroVideo.muted = true;
-    heroVideo.addEventListener('loadedmetadata', () => {
-        heroVideo.play().catch(() => {
-            // Browsers may still require user interaction before playback.
-        });
-    }, { once: true });
-}
-
-// Validate individual fields
-function validateField(field) {
-    const value = field.value.trim();
-    const fieldContainer = field.closest('.field') || field.parentElement;
-    const errorMessage = fieldContainer?.querySelector('.error-message');
-
-    if (!fieldContainer) return true;
-
-    let isValid = true;
-
-    // Check required fields
-    if (field.hasAttribute('required') && !value) {
-        isValid = false;
-    }
-
-    // Check email format
-    if (field.type === 'email' && value && !isValidEmail(value)) {
-        isValid = false;
-    }
-
-    // Check phone format (basic)
-    if (field.type === 'tel' && value && !/^\d{7,}/.test(value.replace(/\D/g, ''))) {
-        isValid = false;
-    }
-
-    if (errorMessage) {
-        if (!value && field.hasAttribute('required')) {
-            errorMessage.textContent = 'This field is required.';
-        } else if (field.type === 'email' && value && !isValidEmail(value)) {
-            errorMessage.textContent = 'Enter a valid email address.';
-        } else if (field.type === 'tel' && value && !/^\d{7,}/.test(value.replace(/\D/g, ''))) {
-            errorMessage.textContent = 'Enter at least 7 digits.';
-        } else {
-            errorMessage.textContent = '';
-        }
-    }
-
-    // Update field styling
-    if (isValid) {
-        fieldContainer.classList.remove('error');
-    } else if (!isValid) {
-        fieldContainer.classList.add('error');
-    }
-
-    return isValid;
-}
-
-// Email validation helper
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Add real-time validation
-if (nameField) nameField.addEventListener('blur', () => validateField(nameField));
-if (phoneField) phoneField.addEventListener('blur', () => validateField(phoneField));
-if (emailField) emailField.addEventListener('blur', () => validateField(emailField));
-
-// Form submission
-if (form) {
-    form.addEventListener('submit', (event) => {
+if (orderForm) {
+    orderForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        // Validate all fields
-        const fields = [nameField, phoneField, emailField];
-        let isFormValid = true;
+        if (!orderForm.reportValidity()) return;
 
-        fields.forEach(field => {
-            if (field && !validateField(field)) {
-                isFormValid = false;
-            }
-        });
+        const order = new FormData(orderForm);
+        const message = [
+            'Hello Cleansimur, I would like to place an order.',
+            `Name: ${order.get('name')}`,
+            `Phone: ${order.get('phone')}`,
+            'Product: 750 ml bottle',
+            `Quantity: ${order.get('quantity')}`,
+            `Delivery city: ${order.get('location')}`,
+            'Please share the available multi-bottle discount.'
+        ].join('\n');
 
-        // Check if a size is selected
-        const sizeSelected = document.querySelector('input[name="size"]:checked');
-        if (!sizeSelected) {
-            isFormValid = false;
-            message.textContent = 'Please select a product size.';
-            message.className = 'form-message error';
-            return;
-        }
-
-        // If form is not valid, show error
-        if (!isFormValid) {
-            message.textContent = 'Please fill in all required fields correctly.';
-            message.className = 'form-message error';
-            return;
-        }
-
-        // Form is valid - show success message
-        const size = new FormData(form).get('size');
-        const name = nameField.value.trim();
-
-        message.textContent = `Thank you, ${name}! Your ${size} enquiry details are ready. An authorised Cleansimur representative will contact you soon.`;
-        message.className = 'form-message success';
-
-        // Optional: Clear form after successful submission
-        setTimeout(() => {
-            form.reset();
-            message.textContent = '';
-            message.className = 'form-message';
-            document.querySelectorAll('.field').forEach(field => {
-                field.classList.remove('error');
-            });
-        }, 3000);
+        orderMessage.textContent = 'Opening WhatsApp with your order details...';
+        window.open(`${whatsappUrl}&text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     });
 }
 
